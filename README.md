@@ -1,6 +1,6 @@
 # Pedro Henrique Silva da Cunha | portfolioHUB
 
-Bem-vindos ao meu repositório de portfólio. Este espaço documenta minha transição do Design Gráfico para o desenvolvimento de sistemas (ADS), unindo minha base visual de 7 anos com o aprendizado prático em Python.
+Bem-vindos ao meu repositório de portfólio. Este espaço documenta minha transição do Design Gráfico para o desenvolvimento de sistemas (ADS), unindo minha base visual de 2 anos + prestação de serviços ao cliente, com o aprendizado prático em Python.
 
 ---
 
