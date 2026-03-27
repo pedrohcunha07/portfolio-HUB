@@ -1,67 +1,45 @@
-# 🚀 portfolioHUB | Pedro Henrique Silva da Cunha
+# Pedro Henrique Silva da Cunha | portfolioHUB
 
-<p align="center">
-  <b>ADS Student @ UniCEUB</b> | <b>Graphic Designer (SENAI)</b> | <b>Python Enthusiast (CS50P)</b>
-</p>
+Bem-vindos ao meu repositório de portfólio. Este espaço documenta minha transição do Design Gráfico para o desenvolvimento de sistemas (ADS), unindo minha base visual de 7 anos com o aprendizado prático em Python.
 
 ---
 
-## 👤 Perfil Pessoal
-Sou um profissional em transição para a área de tecnologia, unindo **7 anos de experiência visual e atendimento** com a lógica de **Análise e Desenvolvimento de Sistemas**. Meu diferencial é a capacidade de criar interfaces estéticas enquanto desenvolvo soluções funcionais em Python e modelagens 3D.
+## 👤 Sobre Mim
+Sou estudante de Análise e Desenvolvimento de Sistemas no UniCEUB. Venho do curso técnico de Design Gráfico no SENAI e trago uma bagagem sólida em comunicação visual e atendimento ao público (4 anos na Drogaria Social). 
 
-* 📍 **Localização:** Brasília, DF
-* 📧 **Contato:** [pedroh.9669@gmail.com](mailto:pedroh.9669@gmail.com)
+Atualmente, foco em entender como o design pode melhorar a usabilidade de softwares, enquanto aprofundo minha lógica de programação através do **CS50P de Harvard**.
+
+* 📧 **E-mail:** pedroh.9669@gmail.com
 * 💼 **LinkedIn:** [linkedin.com/in/pedroh-scunha](https://linkedin.com/in/pedroh-scunha)
-* 🇺🇸 **Idioma:** Inglês Avançado/C1 (**TOEIC Gold Credential: 865/990**)
+* 🇺🇸 **Inglês:** Nível Avançado (Certificado **TOEIC Gold - 865/990**)
 
 ---
 
-## 🛠️ Experiências e Habilidades
+## 🛠️ O que eu faço
 
-### 🐍 Programação & Tecnologia
-* **CS50P Harvard:** Desenvolvimento de scripts em Python (loops, funções, bibliotecas e I/O).
-* **UniCEUB:** Graduando em ADS, com foco em arquitetura de software e lógica.
+### Design e 3D
+Minha base técnica vem do SENAI, onde me especializei em Branding e Interfaces. Também trabalho de forma independente com o **Blender**, criando modelagens e animações de produtos.
 
-### 🎨 Design & 3D (SENAI)
-* **Design Gráfico:** 2 anos de formação técnica. Especialista em Branding e UI/UX.
-* **Blender Freelance:** Modelagem de produtos e animações (Keyframes, Lighting, Rendering).
-
-### 🤝 Soft Skills & Mercado
-* **Atendimento ao Cliente:** 4 anos de experiência direta (Drogaria Social), com foco em resolução de problemas e comunicação clara.
+### Programação
+No momento, estou focado em **Python**, resolvendo problemas de lógica e automação. Tenho familiaridade com o ecossistema Git/GitHub para versionamento de projetos.
 
 ---
 
-## 📂 Projetos em Destaque
+## 📂 Portfólio de Projetos
 
-| Projeto | Categoria | Descrição |
+Abaixo, listo alguns dos trabalhos que desenvolvi, unindo experiências reais de curso e estudos de caso:
+
+| Projeto | O que é | Detalhes |
 | :--- | :--- | :--- |
-| **Natur** | Branding | Identidade visual e embalagem para chocolate 100% natural. |
-| **Smartwatch UI** | UI/UX Design | Interface funcional completa para dispositivos vestíveis. |
-| **Além da Lenda** | Design Social | Banners de valorização do folclore indígena (Projeto SENAI). |
-| **Halloween Case** | Mockup | Design de produto e aplicação de arte temática para cases de celular. |
-| **Escrevivência** | Editorial | Projeto gráfico sobre a obra de Conceição Evaristo. |
-| **Python & 3D** | Dev / 3D | Scripts de automação e animações promocionais no Blender. |
+| **Natur** | Identidade Visual | Marca e embalagem de chocolate 100% natural. |
+| **Smartwatch UI** | Interface (UX/UI) | Design de sistema para telas de relógios inteligentes. |
+| **Heineken (Concept)** | Vídeo/Motion | Estudo pessoal de edição e animação promocional. |
+| **Além da Lenda** | Banners/Eventos | Material gráfico para evento sobre folclore indígena. |
+| **Halloween Case** | Produto/3D | Mockups de capinhas de celular personalizadas. |
+| **Escrevivência** | Editorial | Projeto gráfico literário (Conceição Evaristo). |
 
 ---
 
-## 🎓 Formação & Certificações
-* **Superior:** Análise e Desenvolvimento de Sistemas - UniCEUB.
-* **Técnico:** Design Gráfico - SENAI.
-* **Proficiência:** TOEIC Gold (865/990) - Certificado em 2025.
-* **Extensão:** CS50's Introduction to Programming with Python (Harvard/edX).
-
----
-
-## 🎥 Apresentação Multimídia
-> **[CLIQUE AQUI PARA ACESSAR MEUS SLIDES DE PROJETOS](COLOQUE_AQUI_O_LINK_DO_SEU_CANVA_OU_SLIDES)**
-*Nesta apresentação, demonstro visualmente os detalhes da Natur, as interfaces do Smartwatch e meus renders 3D.*
-
----
-
-## 🤝 Recomendações
-> ""
-
----
-<p align="center">
-  <i>Projeto desenvolvido para o Desafio Inicial de ADS - UniCEUB 2026</i>
-</p>
+## 🎓 Formação e Certificações
+* **Graduação em ADS** - UniCEUB (Início em 2026).
+* **Técnico em Design Gráfico
