@@ -59,7 +59,7 @@ Sou um profissional em transição para a área de tecnologia, unindo **7 anos d
 ---
 
 ## 🤝 Recomendações
-> "Profissional proativo, com excelente domínio de ferramentas gráficas e rápida curva de aprendizado em linguagens de programação."
+> ""
 
 ---
 <p align="center">
