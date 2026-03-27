@@ -23,6 +23,9 @@ Minha base técnica vem do SENAI, onde me especializei em Branding e Interfaces.
 ### Programação
 No momento, estou focado em **Python**, resolvendo problemas de lógica e automação. Tenho familiaridade com o ecossistema Git/GitHub para versionamento de projetos.
 
+### Currículo Escrito
+
+
 ---
 
 ## 📂 Portfólio de Projetos
