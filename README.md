@@ -27,13 +27,15 @@ No momento, estou focado em **Python**, resolvendo problemas de lógica e automa
 
 ## 📂 Portfólio de Projetos
 
+| **Portfólio - Slides** | [https://docs.google.com/presentation/d/1foRcgAudYEzlB-Q5GFfNolRIs1SrIAvPWwEP_yqWJmM/edit?usp=sharing](https://docs.google.com/presentation/d/1foRcgAudYEzlB-Q5GFfNolRIs1SrIAvPWwEP_yqWJmM/edit?usp=sharing)
+
 Abaixo, listo alguns dos trabalhos que desenvolvi, unindo experiências reais de curso e estudos de caso:
 
 | Projeto | O que é | Detalhes |
 | :--- | :--- | :--- |
 | **Natur** | Identidade Visual | Marca e embalagem de chocolate 100% natural. |
 | **Smartwatch UI** | Interface (UX/UI) | Design de sistema para telas de relógios inteligentes. |
-| **Heineken (Concept)** | Vídeo/Motion | Estudo pessoal de edição e animação promocional. |
+| **Heineken (Concept)** | Vídeo/Motion | Estudo pessoal de edição e animação promocional. | [https://youtu.be/yARfQ39oxdI](https://youtu.be/yARfQ39oxdI)
 | **Além da Lenda** | Banners/Eventos | Material gráfico para evento sobre folclore indígena. |
 | **Halloween Case** | Produto/3D | Mockups de capinhas de celular personalizadas. |
 | **Escrevivência** | Editorial | Projeto gráfico literário (Conceição Evaristo). |
