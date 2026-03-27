@@ -1,7 +1,7 @@
 # 🚀 portfolioHUB | Pedro Henrique Silva da Cunha
 
 <p align="center">
-  <b>ADS Student @ UniCEUB</b> | <b>Ex-Graphic Designer (SENAI)</b> | <b>Python Enthusiast (CS50P)</b>
+  <b>ADS Student @ UniCEUB</b> | <b>Graphic Designer (SENAI)</b> | <b>Python Enthusiast (CS50P)</b>
 </p>
 
 ---
