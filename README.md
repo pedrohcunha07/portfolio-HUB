@@ -31,8 +31,8 @@ No momento, estou focado em **Python**, resolvendo problemas de lógica e automa
 
 Abaixo, listo alguns dos trabalhos que desenvolvi, unindo experiências reais de curso e estudos de caso:
 
-| Projeto | O que é | Detalhes |
-| :--- | :--- | :--- |
+| Projeto | O que é | Detalhes | Links
+| :--- | :--- | :--- | :--- |
 | **Natur** | Identidade Visual | Marca e embalagem de chocolate 100% natural. |
 | **Smartwatch UI** | Interface (UX/UI) | Design de sistema para telas de relógios inteligentes. |
 | **Heineken (Concept)** | Vídeo/Motion | Estudo pessoal de edição e animação promocional. | [https://youtu.be/yARfQ39oxdI](https://youtu.be/yARfQ39oxdI)
