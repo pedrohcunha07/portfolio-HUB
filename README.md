@@ -5,7 +5,7 @@
 * **Contato:** pedroh.9669@gmail.com | [LinkedIn](https://linkedin.com/in/pedroh-scunha)
 * **Localização:** Brasília, DF.
 
-## 2. Currículo Adaptado
+## 2. Currículo
 * **Educação:** * ADS - UniCEUB (2026 - Presente)
     * Técnico em Design Gráfico - SENAI
 * **Certificações:**
