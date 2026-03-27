@@ -42,4 +42,4 @@ Abaixo, listo alguns dos trabalhos que desenvolvi, unindo experiências reais de
 
 ## 🎓 Formação e Certificações
 * **Graduação em ADS** - UniCEUB (Início em 2026).
-* **Técnico em Design Gráfico
+* **Técnico em Design Gráfico** - SENAI DF (Início em 2024 - Término em 2025).
