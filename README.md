@@ -4,7 +4,7 @@ Bem-vindos ao meu repositório de portfólio. Este espaço documenta minha trans
 
 ---
 
-## 👤 Sobre Mim
+##  Sobre Mim
 Sou estudante de Análise e Desenvolvimento de Sistemas no UniCEUB. Venho do curso técnico de Design Gráfico no SENAI e trago uma bagagem sólida em comunicação visual e atendimento ao público (4 anos na Drogaria Social). 
 
 Atualmente, foco em entender como o design pode melhorar a usabilidade de softwares, enquanto aprofundo minha lógica de programação através do **CS50P de Harvard**.
@@ -28,7 +28,7 @@ No momento, estou focado em **Python**, resolvendo problemas de lógica e automa
 
 ---
 
-## 📂 Portfólio de Projetos
+##  Portfólio de Projetos
 
 | **Portfólio - Slides** | [https://docs.google.com/presentation/d/1foRcgAudYEzlB-Q5GFfNolRIs1SrIAvPWwEP_yqWJmM/edit?usp=sharing](https://docs.google.com/presentation/d/1foRcgAudYEzlB-Q5GFfNolRIs1SrIAvPWwEP_yqWJmM/edit?usp=sharing)
 
@@ -45,6 +45,6 @@ Abaixo, listo alguns dos trabalhos que desenvolvi, unindo experiências reais de
 
 ---
 
-## 🎓 Formação e Certificações
+##  Formação e Certificações
 * **Graduação em ADS** - UniCEUB (Início em 2026).
 * **Técnico em Design Gráfico** - SENAI DF (Início em 2024 - Término em 2025).
