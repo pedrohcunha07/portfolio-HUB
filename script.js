@@ -29,23 +29,34 @@ async function fetchRepos() {
         container.innerHTML = ''; 
 
         for (const repo of repos) {
-            // Chamada da IA para cada repositório
-            const aiSummary = await analyzeRepoWithGemini(repo.name, repo.description);
-            
+            // Criamos o card primeiro com um loading na descrição
+            const cardId = `ai-resumo-${repo.id}`;
             const card = `
-                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition shadow-lg">
-                    <h3 class="text-xl font-bold mb-2 text-blue-400">${repo.name}</h3>
-                    <p class="text-gray-300 text-sm mb-4 italic">"IA: ${aiSummary}"</p>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2 text-blue-400">${repo.name}</h3>
+                        <p id="${cardId}" class="text-gray-400 text-sm mb-4 animate-pulse">Consultando IA Gemini...</p>
+                    </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-xs font-mono bg-gray-900 px-2 py-1 rounded text-green-400">${repo.language || 'Config'}</span>
-                        <a href="${repo.html_url}" target="_blank" class="text-xs font-bold hover:underline">VIEW SOURCE →</a>
+                        <a href="${repo.html_url}" target="_blank" class="text-xs font-bold hover:underline text-blue-300">VIEW SOURCE →</a>
                     </div>
                 </div>
             `;
             container.innerHTML += card;
+
+            // Chamamos a IA em segundo plano para não travar o site
+            analyzeRepoWithGemini(repo.name, repo.description).then(summary => {
+                const summaryElement = document.getElementById(cardId);
+                if (summaryElement) {
+                    summaryElement.innerText = summary;
+                    summaryElement.classList.remove('animate-pulse');
+                    summaryElement.classList.replace('text-gray-400', 'text-gray-200');
+                }
+            });
         }
     } catch (error) {
-        container.innerHTML = '<p class="text-red-500">Erro ao carregar dados do GitHub. Verifique seu usuário.</p>';
+        container.innerHTML = '<p class="text-red-500">Erro crítico ao carregar dados.</p>';
     }
 }
 
