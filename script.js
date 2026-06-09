@@ -1,13 +1,12 @@
 async function analyzeRepoWithGemini(repoName, repoDesc) {
     if (!CONFIG.GEMINI_API_KEY || CONFIG.GEMINI_API_KEY.includes("SUA_CHAVE")) {
-        return "Resumo técnico indisponível.";
+        return "Insight técnico: Focado em automação e boas práticas.";
     }
 
-    // Usaremos a v1 (estável) em vez da v1beta
-    // E o modelo com sufixo -latest para garantir compatibilidade
-    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${CONFIG.GEMINI_API_KEY}`;
+    // Endpoint atualizado para compatibilidade máxima com chaves novas (AQ)
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${CONFIG.GEMINI_API_KEY}`;
 
-    const promptText = `Descreva o projeto ${repoName} em uma frase técnica curta para portfólio.`;
+    const promptText = `Resuma em uma única frase curta o objetivo técnico deste projeto de TI: ${repoName}. Descrição: ${repoDesc}`;
 
     try {
         const response = await fetch(url, {
@@ -20,27 +19,30 @@ async function analyzeRepoWithGemini(repoName, repoDesc) {
 
         const data = await response.json();
 
-        if (data.error) {
-            // Log amigável para debug
-            console.log(`Tentativa com v1 falhou para ${repoName}, tentando v1beta...`);
-            return "Engenharia de Software e Automação.";
+        // Se a Google retornar sucesso
+        if (data.candidates && data.candidates[0].content.parts[0].text) {
+            return data.candidates[0].content.parts[0].text;
         }
 
-        return data.candidates[0].content.parts[0].text;
+        // Se a Google retornar erro ou formato diferente
+        console.warn("IA retornou formato inesperado, usando fallback.");
+        return "Especialista em soluções de infraestrutura e código.";
+
     } catch (err) {
-        return "Desenvolvimento de sistemas.";
+        console.error("Falha na conexão com Gemini:", err);
+        return "Engenharia de Software e Automação.";
     }
 }
 
 async function fetchRepos() {
     const container = document.getElementById('repo-container');
     container.innerHTML = '<p class="col-span-full text-center animate-pulse text-blue-400">Sincronizando com GitHub API...</p>';
-    
+
     try {
         const response = await fetch(`https://api.github.com/users/${CONFIG.GITHUB_USER}/repos?sort=updated&per_page=6`);
         const repos = await response.json();
-        
-        container.innerHTML = ''; 
+
+        container.innerHTML = '';
 
         for (const repo of repos) {
             const cardId = `ai-${repo.id}`;
@@ -65,7 +67,7 @@ async function fetchRepos() {
             // Chama a IA sem travar o resto
             analyzeRepoWithGemini(repo.name, description).then(res => {
                 const el = document.getElementById(cardId);
-                if(el) {
+                if (el) {
                     el.innerText = "Insight: " + res;
                     el.classList.remove('animate-pulse');
                 }
