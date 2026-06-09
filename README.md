@@ -4,6 +4,12 @@ Bem-vindos ao meu repositório de portfólio. Este espaço documenta minha trans
 
 ---
 
+# PortfolioHUB + IA GEMINI
+
+Plataforma de portfólio integrada dinamicamente com a API pública do GitHub e estruturada sob conceitos de DevOps.
+
+---
+
 ##  Sobre Mim
 Sou estudante de Análise e Desenvolvimento de Sistemas no UniCEUB. Venho do curso técnico de Design Gráfico no SENAI e trago uma bagagem sólida em comunicação visual e atendimento ao público (4 anos na Drogaria Social). 
 
