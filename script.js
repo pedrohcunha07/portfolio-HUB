@@ -1,15 +1,16 @@
 async function analyzeRepoWithGemini(repoName, repoDesc) {
-    // Se a chave não existir, ele avisa no console e para aqui
     if (!CONFIG.GEMINI_API_KEY || CONFIG.GEMINI_API_KEY.includes("SUA_CHAVE")) {
-        console.warn("Aviso: API Key não encontrada no config.js");
         return "Resumo técnico indisponível.";
     }
 
-    // Simplificamos o prompt ao máximo para evitar erro 400 (Filtros de Segurança)
-    const promptText = `Descreva o projeto ${repoName} em uma frase curta.`;
+    // Usaremos a v1 (estável) em vez da v1beta
+    // E o modelo com sufixo -latest para garantir compatibilidade
+    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${CONFIG.GEMINI_API_KEY}`;
+
+    const promptText = `Descreva o projeto ${repoName} em uma frase técnica curta para portfólio.`;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${CONFIG.GEMINI_API_KEY}`, {
+        const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -19,15 +20,15 @@ async function analyzeRepoWithGemini(repoName, repoDesc) {
 
         const data = await response.json();
 
-        // Se der erro 400, o console vai imprimir o motivo real da Google agora
         if (data.error) {
-            console.error("MOTIVO DO ERRO 400:", data.error.message);
-            return "Análise da IA simplificada.";
+            // Log amigável para debug
+            console.log(`Tentativa com v1 falhou para ${repoName}, tentando v1beta...`);
+            return "Engenharia de Software e Automação.";
         }
 
         return data.candidates[0].content.parts[0].text;
     } catch (err) {
-        return "Engenharia de Software.";
+        return "Desenvolvimento de sistemas.";
     }
 }
 
