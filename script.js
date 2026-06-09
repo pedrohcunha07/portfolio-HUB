@@ -1,27 +1,38 @@
 async function analyzeRepoWithGemini(repoName, description) {
-    const prompt = `Resuma de forma técnica e elegante em uma frase curta para um portfólio DevOps o seguinte projeto: ${repoName}. Descrição: ${description}`;
+    // Validação DevOps: Verifica se a chave existe antes de gastar recurso
+    if (!CONFIG.GEMINI_API_KEY || CONFIG.GEMINI_API_KEY === "SUA_CHAVE_AQUI") {
+        console.error("ERRO DEVOPS: Chave API não configurada no config.js");
+        return "Configure sua API Key para ver a análise.";
+    }
+
+    const prompt = `Descreva em uma frase curta e técnica para um portfólio este projeto: ${repoName}. Contexto: ${description}`;
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${CONFIG.GEMINI_API_KEY}`, {
+        // Usaremos o modelo gemini-1.5-flash que é mais rápido e aceita esse formato
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${CONFIG.GEMINI_API_KEY}`;
+        
+        const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }]
+                contents: [{
+                    parts: [{ text: prompt }]
+                }]
             })
         });
 
         const data = await response.json();
-        
-        // DEBUG: Se a Google retornar erro, veremos no console (F12)
+
+        // Se a Google retornar 400, o erro detalhado aparecerá aqui no seu F12
         if (data.error) {
-            console.error("Erro na API Gemini:", data.error.message);
-            return "Análise de IA indisponível no momento.";
+            console.error("Detalhes do erro na Google API:", data.error);
+            return "Análise indisponível (Erro 400).";
         }
 
         return data.candidates[0].content.parts[0].text;
     } catch (error) {
-        console.error("Erro na requisição da IA:", error);
-        return "Infraestrutura como Código e Automação.";
+        console.error("Falha na requisição:", error);
+        return "Engenharia de Software e Automação.";
     }
 }
 
