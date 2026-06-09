@@ -1,4 +1,4 @@
-// Função para chamar a IA Gemini
+
 async function analyzeRepoWithGemini(repoName, description) {
     const prompt = `Resuma de forma técnica e elegante em uma frase para um portfólio DevOps o seguinte projeto: ${repoName}. Descrição: ${description}`;
 
@@ -14,11 +14,11 @@ async function analyzeRepoWithGemini(repoName, description) {
         const data = await response.json();
         return data.candidates[0].content.parts[0].text;
     } catch (error) {
-        return "Especialista em automação e infraestrutura."; // Texto padrão caso falhe
+        return "Especialista em automação e infraestrutura."; 
     }
 }
 
-// Função para buscar repositórios
+
 async function fetchRepos() {
     const container = document.getElementById('repo-container');
     
@@ -29,36 +29,54 @@ async function fetchRepos() {
         container.innerHTML = ''; 
 
         for (const repo of repos) {
-            // Criamos o card primeiro com um loading na descrição
             const cardId = `ai-resumo-${repo.id}`;
+            
+            
+            const repoDescription = repo.description || "Projeto focado em infraestrutura e automação.";
+
             const card = `
-                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition shadow-lg flex flex-col justify-between">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-500 transition shadow-lg flex flex-col justify-between min-h-[250px]">
                     <div>
                         <h3 class="text-xl font-bold mb-2 text-blue-400">${repo.name}</h3>
-                        <p id="${cardId}" class="text-gray-400 text-sm mb-4 animate-pulse">Consultando IA Gemini...</p>
+                        
+                        <!-- Descrição Original do GitHub -->
+                        <p class="text-gray-200 text-sm mb-4">
+                            ${repoDescription}
+                        </p>
+
+                        <!-- Insight da IA Gemini (Secundário e elegante) -->
+                        <div class="bg-gray-900/50 p-3 rounded border-l-2 border-blue-500 mt-2">
+                            <p id="${cardId}" class="text-xs text-gray-400 animate-pulse">
+                                IA Gemini analisando...
+                            </p>
+                        </div>
                     </div>
-                    <div class="flex justify-between items-center mt-4">
-                        <span class="text-xs font-mono bg-gray-900 px-2 py-1 rounded text-green-400">${repo.language || 'Config'}</span>
-                        <a href="${repo.html_url}" target="_blank" class="text-xs font-bold hover:underline text-blue-300">VIEW SOURCE →</a>
+
+                    <div class="flex justify-between items-center mt-6">
+                        <span class="text-xs font-mono bg-blue-900/30 px-2 py-1 rounded text-blue-300 border border-blue-800">
+                            ${repo.language || 'Config'}
+                        </span>
+                        <a href="${repo.html_url}" target="_blank" class="text-xs font-bold hover:text-white text-blue-400 transition">
+                            VER CÓDIGO SOURCE →
+                        </a>
                     </div>
                 </div>
             `;
             container.innerHTML += card;
 
-            // Chamamos a IA em segundo plano para não travar o site
-            analyzeRepoWithGemini(repo.name, repo.description).then(summary => {
+            
+            analyzeRepoWithGemini(repo.name, repoDescription).then(summary => {
                 const summaryElement = document.getElementById(cardId);
                 if (summaryElement) {
-                    summaryElement.innerText = summary;
+                    summaryElement.innerText = "IA Insight: " + summary;
                     summaryElement.classList.remove('animate-pulse');
-                    summaryElement.classList.replace('text-gray-400', 'text-gray-200');
                 }
             });
         }
     } catch (error) {
-        container.innerHTML = '<p class="text-red-500">Erro crítico ao carregar dados.</p>';
+        container.innerHTML = '<p class="text-red-500 text-center col-span-full">Erro ao conectar com GitHub API.</p>';
     }
 }
 
-// Inicializa o processo
+
 fetchRepos();
