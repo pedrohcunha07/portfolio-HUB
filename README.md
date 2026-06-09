@@ -7,8 +7,7 @@ Bem-vindos ao meu repositório de portfólio. Este espaço documenta minha trans
 Plataforma de portfólio integrada dinamicamente com a API pública do GitHub e estruturada sob conceitos de DevOps.
 
 ##  Sobre Mim
-Sou estudante de Análise e Desenvolvimento de Sistemas no UniCEUB. Venho do curso técnico de Design Gráfico no SENAI e trago uma bagagem sólida em comunicação visual e atendimento ao público (4 anos na Drogaria Social). 
->>>>>>> 395c90548a6e0bfc3f6afd0422281b9f5c73050e
+Sou estudante de Análise e Desenvolvimento de Sistemas no UniCEUB. Venho do curso técnico de Design Gráfico no SENAI e trago uma bagagem sólida em comunicação visual e atendimento ao público (4 anos na Drogaria Social).
 
 Atualmente, foco em entender como o design pode melhorar a usabilidade de softwares, enquanto aprofundo minha lógica de programação através do **CS50P de Harvard**.
 
