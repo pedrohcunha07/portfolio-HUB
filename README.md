@@ -3,12 +3,6 @@
 Bem-vindos ao meu repositório de portfólio. Este espaço documenta minha transição do Design Gráfico para o desenvolvimento de sistemas (ADS), unindo minha base visual de 2 anos + prestação de serviços ao cliente, com o aprendizado prático em Python.
 
 ---
-
-<<<<<<< HEAD
-## Sobre Mim
-
-Sou estudante de Análise e Desenvolvimento de Sistemas no UniCEUB. Venho do curso técnico de Design Gráfico no SENAI e trago uma bagagem sólida em comunicação visual e atendimento ao público (4 anos na Drogaria Social).
-=======
 # PortfolioHUB + IA GEMINI
 Plataforma de portfólio integrada dinamicamente com a API pública do GitHub e estruturada sob conceitos de DevOps.
 
